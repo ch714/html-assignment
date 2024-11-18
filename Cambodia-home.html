@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<title>カンボジア紹介-ホーム</title>
+
+<style type="text/css">
+#photo {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#photo img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+</style>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(function(){
+    var setImg = '#photo';
+    var fadeSpeed = 1600;
+    var switchDelay = 5000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
+</head>
+<body bgcolor="#99ff99">
+<div align="center">
+<font color="#f39800"><b><i><font size="20">カンボジア紹介</i></b></font>
+<br>
+<hr width="1200">
+<font color="#009944"><marquee>カンボジアへようこそ !!</marquee></font>
+<br>
+<font color="#009944"><marquee direction="right">សូមស្វាគមន៍មកកាន់ប្រទេសកម្ពុជា !!</marquee direction="right"></font>
+<hr width="1200">
+
+<a href="Cambodia-home.html">ホーム</a>&emsp;<a href="Cambodia-basic data.html">基本データ</a>&emsp;<a href="Cambodia-food.html">食べ物</a>&emsp;<a href="Cambodia-tourism.html">観光地</a>
+<hr width="1200">
+
+<br>
+
+<div id="photo">
+<img src="Angkor Wat.jpg" width="500" height="300" alt="">
+<img src="flag.jpg" width="500" height="300" alt="">
+<img src="nature.jpg" width="500" height="300" alt="">
+<img src="Angkor Thom.jpg" width="500" height="300" alt="">
+<img src="vehicle.jpg" width="500" height="300" alt="">
+<img src="market.jpg" width="500" height="300" alt="">
+<img src="national museum.jpg" width="500" height="300" alt="">
+<img src="food A.jpg" width="500" height="300" alt="">
+<img src="lake.jpg" width="500" height="300" alt="">
+<img src="Phnom Penh night.jpg" width="500" height="300" alt="">
+</div>
+
+
+
+
+</html>
